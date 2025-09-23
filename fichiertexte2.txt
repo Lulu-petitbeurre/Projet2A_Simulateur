@@ -1,0 +1,8 @@
+ MOV R0,#1
+ MOV R1,#2
+ MOV R2,#3
+debut ADD R2,R2,#1
+	b debut
+ MOV R0,R0
+ MOV R0,R0
+
