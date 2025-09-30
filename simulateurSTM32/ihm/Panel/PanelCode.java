@@ -32,6 +32,8 @@ public class PanelCode extends javax.swing.JPanel {
      Ihm ihm;
      int pc=0;
      protected ArrayList<Instruction> listeCommandes;
+	private LineNumbering lineNumbers; //New attribut to add line number to this Panel
+	
     /** Creates new form PanelCode */
     public PanelCode(Ihm ihm) {
         initComponents();
@@ -88,6 +90,18 @@ public class PanelCode extends javax.swing.JPanel {
         jTextPane2.setMinimumSize(new java.awt.Dimension(104, 22));
         jTextPane2.setPreferredSize(new java.awt.Dimension(100, 10000));
         jScrollPane2.setViewportView(jTextPane2);
+
+		 jTextPane1.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() { //Update line numbers
+            public void insertUpdate(javax.swing.event.DocumentEvent e) {
+                lineNumbers.updateLineNumbers();
+            }
+            public void removeUpdate(javax.swing.event.DocumentEvent e) {
+                lineNumbers.updateLineNumbers();
+            }
+            public void changedUpdate(javax.swing.event.DocumentEvent e) {
+                lineNumbers.updateLineNumbers();
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
