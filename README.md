@@ -3,7 +3,7 @@
 Un simulateur pédagogique interactif développé en Java pour les étudiants de l'ENSEA. 
 Il permet d'écrire du code assembleur type ARM Cortex-M et de visualiser en temps réel le comportement interne du microprocesseur, afin de transformer des concepts théoriques abstraits en mécaniques concrètes et visibles.
 
-![Capture d'écran du simulateur LCM3](lien_vers_ton_image_capture.png)
+![Capture d'écran du simulateur LCM3](simulateur.png)
 
 ---
 
